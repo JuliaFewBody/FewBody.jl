@@ -1,0 +1,11 @@
+name = "FewBody"
+uuid = "12d3c571-b1f7-490f-9418-0f2d4ffe35c9"
+authors = ["Shuhei Ohno", "Martin Mikkelsen"]
+version = "0.0.1"
+
+[deps]
+DocStringExtensions = "ffbed154-4ef7-542d-bbb7-c09d3a79fcae"
+
+[compat]
+DocStringExtensions = "0.9.3"
+julia = "1.10"
