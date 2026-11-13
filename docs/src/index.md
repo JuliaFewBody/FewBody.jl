@@ -15,7 +15,12 @@ CurrentModule = FewBody
 [![code style: runic](https://img.shields.io/badge/code_style-%E1%9A%B1%E1%9A%A2%E1%9A%BE%E1%9B%81%E1%9A%B2-black)](https://github.com/fredrikekre/Runic.jl)
 [![ColPrac: Contributor's Guide on Collaborative Practices for Community Packages](https://img.shields.io/badge/ColPrac-contributor's%20guide-blueviolet)](https://github.com/SciML/ColPrac)
 
-FewBody.jl is a Julia package for solving quantum-mechanical few-body problems. It brings together the JuliaFewBody ecosystem under a common interface, providing tools for constructing few-body Hamiltonians and accessing complementary numerical approaches such as explicitly correlated Gaussian (ECG) and variational Monte Carlo (VMC) methods.
+FewBody.jl provides the JuliaFewBody ecosystem's shared Hamiltonian construction
+API by re-exporting the exact types from
+[FewBodyHamiltonians.jl](https://github.com/JuliaFewBody/FewBodyHamiltonians.jl).
+Construct particle-indexed Hamiltonians here, then load a compatible solver
+package such as FewBodyECG or FewBodyVMC for numerical calculations. Solver
+support for individual terms and unit systems is documented by each backend.
 
 ## Installation
 
@@ -25,10 +30,11 @@ Run the following command in the Julia REPL or a notebook:
 import Pkg; Pkg.add(url="https://github.com/JuliaFewBody/FewBody.jl.git")
 ```
 
-After installation, run the following to load the package and verify it works:
+After installation, construct a two-particle Coulomb system:
 
 ```@repl
-import FewBody; FewBody.hello()
+using FewBody
+H = Kinetic([1836.15267343, 1.0]) + Coulomb([+1.0, -1.0])
 ```
 
 ## User Guide
