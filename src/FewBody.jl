@@ -3,6 +3,12 @@ module FewBody
 # Packages
 
 import DocStringExtensions
+using FewBodyHamiltonians: Operator, KineticTerm, PotentialTerm, Hamiltonian,
+    UnitSystem, Kinetic, Coulomb, Gaussian, ManyBodyGaussian, Oscillator, Custom,
+    Tensor, SpinOrbit
+
+export Operator, KineticTerm, PotentialTerm, Hamiltonian, UnitSystem,
+    Kinetic, Coulomb, Gaussian, ManyBodyGaussian, Oscillator, Custom, Tensor, SpinOrbit
 
 """
 $(DocStringExtensions.TYPEDSIGNATURES)

@@ -2,6 +2,8 @@ using FewBody
 using Aqua
 using Test
 
+include("shared_hamiltonians.jl")
+
 @testset "Aqua.jl" begin
     Aqua.test_all(FewBody)
 end

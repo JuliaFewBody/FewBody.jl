@@ -5,7 +5,9 @@ version = "0.0.1"
 
 [deps]
 DocStringExtensions = "ffbed154-4ef7-542d-bbb7-c09d3a79fcae"
+FewBodyHamiltonians = "3a126c26-e5d7-4a95-83c3-3b69f8a11ded"
 
 [compat]
 DocStringExtensions = "0.9.3"
+FewBodyHamiltonians = "0.1"
 julia = "1.10"
